@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Muhammad Ali Traders</title>
+  <style>
+    body { font-family: Arial; background:#f9f9f9; padding:20px; }
+    .hidden { display:none; }
+  </style>
+</head>
+<body>
+  <div id="loginBox">
+    <h2>Admin Login</h2>
+    <input type="password" id="password" placeholder="Enter Password">
+    <button onclick="checkPassword()">Login</button>
+  </div>
+  <div id="adminPanel" class="hidden">
+    <h1>Welcome Admin</h1>
+    <p>Here you can manage your website content.</p>
+  </div>
+<script>
+  const correctPassword = "Admin123";
+  function checkPassword(){
+    let input = document.getElementById("password").value;
+    if(input === correctPassword){
+      document.getElementById("loginBox").classList.add("hidden");
+      document.getElementById("adminPanel").classList.remove("hidden");
+    } else {
+      alert("Wrong Password!");
+    }
+  }
+</script>
+</body>
+</html>
